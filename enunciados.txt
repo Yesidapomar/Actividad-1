@@ -1,0 +1,153 @@
+Ejercicio 1.
+El ministerio de la salud desea mantener un sistema de información relativo a hospitales.
+A continuación se detalla lo que se desea modelar:
+HOSPITAL, con los datos:
+• código, que lo identifica.
+• nombre
+• dirección
+• teléfono
+• cantidad de camas
+SALA, con los datos:
+• código
+• nombre
+• cantidad de camas
+MEDICO, con los datos:
+• cédula de identidad
+• nombre
+• especialidad
+LABORATORIO, con los datos:
+• código, que lo identifica.
+• nombre
+• dirección
+• teléfono
+PACIENTE, con los datos:
+• cédula de identidad
+• número de registro
+• número de cama
+• nombre
+• dirección
+• fecha de nacimiento
+• sexo
+DIAGNOSTICO, con los datos:
+• código, que lo identifica.
+• tipo
+• complicaciones
+Además se sabe que:
+• Cada hospital tiene varias salas. Cada una de ellas pertenece a un solo hospital. En
+distintos hospitales puede haber salas con el mismo código, pero esto no puede ocurrir
+dentro de un hospital.
+• Cada médico trabaja en un único hospital. 
+Curso BD y Sistemas de Información Practico 1 – Modelo Entidad Relación
+Instituto de Computación – Facultad de Ingeniería – Universidad de la República
+• Cada hospital trabaja con muchos laboratorios, y un laboratorio presta servicios a más de
+un hospital. Interesa conocer la descripción de cada servicio y la fecha en que se realizó.
+• Un paciente puede estar internado en una única sala.
+• Cada paciente puede ser atendido por más de un médico, y a su vez cada médico
+atenderá varios pacientes. Interesa conocer las fechas de las atenciones.
+• Cada paciente puede tener varios diagnósticos. Interesa saber la fecha en que se realizó
+cada uno.
+Diseñar un Modelo Entidad Relación para la realidad planteada (MER). 
+
+Solución Imagen1
+
+
+
+Ejercicio 2.
+La secretaría del MERCOSUR desea diseñar un sistema de información sobre relaciones
+comerciales y diplomáticas entre paises. Cada pais se identifica por su nombre, mientras que
+de cada producto se conoce su nombre y una breve descripción. Se desea modelar que:
+• Un país puede tener relaciones diplomáticas con varios países, interesando saber en
+qué fecha se establecieron.
+• Por otro lado interesa modelar el flujo de productos de un país a otro. (por ej. : un país
+que exporta un producto, ¿hacia dónde lo hace?) 
+
+Solución Imagen2
+
+Ejercicio 3.
+Se pretende modelar la cantidad de goles que hizo un jugador a lo largo de su vida en cada
+equipo en que jugó. Tanto de los jugadores como de los equipos se conoce su nombre.
+Discutir la posibilidad de representar las siguientes opciones, marcando errores y
+corrigiéndolos en el MER propuesto:
+1. Representar los goles realizados por un jugador en cada temporada (identificada por
+el año)
+2. Representar los goles realizados por un jugador en los distintos campeonatos que jugó
+en cada equipo. Cada campeonato se identifica por un código y se conoce su nombre y el año
+en que se jugó. 
+
+solución imagen 3
+
+Ejercicio 6.
+Una cadena de restaurantes ha relevado información acerca de los clientes y sus
+preferencias. De cada persona, identificada por su cédula de identidad, se conoce su nombre,
+el restaurant que frecuenta más y las comidas que mas le gustan.
+De cada restaurant, identificado por su nombre, se conoce las comidas que preparan. De
+cada comida se conoce su nombre, que la identifica, el tiempo de preparación y los
+ingredientes principales.
+a. Diseñar un MER que represente la realidad anterior
+b. Modificar el MER anterior para representar la información anterior considerando la
+siguientes restricciones.
+• Un restaurante no vende más de 10 comidas.
+• Una persona frecuenta varios restaurantes.
+• A una persona no le gusta una comida por sí sola sino cómo la sirven en determinados
+restaurantes. 
+
+Solución imagen 6 a
+	imagen 6 b
+
+Ejercicio 8.
+Se desea modelar parte de la realidad de la oficina de trabajo de una Facultad.
+La oficina de trabajo recibe ofertas de empleo y cada vez que esto ocurre se abre un
+llamado a estudiantes interesados. A cada llamado se le asigna un número, una descripción, la
+fecha de aparición y la fecha límite de presentación al mismo.
+Los llamados pueden ser para una empresa o para una facultad. Si el llamado es para una
+empresa se sabe el nombre de la misma y si desea figurar o no en el aviso que saldrá
+publicado. Cuando la oferta de empleo proviene de una facultad, se conoce el nombre de la
+institución y dentro de la misma qué instituto u oficina realizó la solicitud.
+Para anotarse a un llamado, el estudiante debe estar registrado en la oficina. De los
+estudiantes se conoce su cédula, nombre, fecha de nacimiento, dirección, email, currículum y
+teléfonos. Además se sabe en que carrera de las que dicta la Facultad están más avanzados. Se
+considera una sola carrera por estudiante. De cada estudiante inscripto al llamado se registra
+la fecha de inscripción al mismo.
+Los currículum de los estudiantes presentados se envían a la empresa o facultad que
+ofrece el empleo, para que esta realice la selección. En caso que la empresa decida no
+contratar a nadie el llamado se declara como desierto y se registra el motivo de tal situación
+para tenerlo en cuenta en futuros llamados. También puede suceder que ningún estudiante se
+inscriba para un llamado, en cuyo caso el llamado también será declarado como desierto. De
+lo contrario se registran los estudiantes contratados en el mismo.
+Diseñar un MER que represente la información de los llamados y sus posibles resultados.
+
+Solución imagen 8
+
+Ejercicio 9.
+Una empresa de entretenimientos y vacaciones para niños en edad escolar y preescolar
+desea automatizar el manejo de la información de sus clientes y las asociaciones con las que
+trabaja. La información que se desea mantener tiene las siguientes características:
+Existen varias asociaciones juveniles, las cuales tienen sus propias colonias de vacaciones.
+Cada asociación tiene varias colonias, pero cada colonia pertenece a una única asociación. De
+cada asociación se conoce su nombre, que la identifica, la dirección y un teléfono de
+referencia. De las colonias se conoce su código y ubicación; el código puede repetirse para las
+distintas asociaciones.
+En las colonias trabajan varios líderes de grupos, de los cuales se conoce su C.I., nombre y
+teléfono. Cada líder puede trabajar para varias colonias. Todos los líderes deben tener una
+certificación que los acredita como tales, interesa la fecha, el grado y la asociación que emitió
+el certificado. En caso de tener más de un certificado interesa sólo el más reciente. 
+Cada líder en una colonia coordina exactamente una actividad, pero puede ayudar en
+otras. Las actividades a su vez son desarrolladas (coordinación y ayuda) por varios líderes de
+colonias. De las actividades se conoce su identificador y una breve descripción de la misma.
+Estas pueden ser de los siguientes tipos: campamentos, deportes y juegos. De los
+campamentos interesa la ubicación y la duración en días, de los deportes interesa el tipo, los
+accesorios necesarios y la cantidad de horas semanales de entrenamiento, de los juegos
+interesa el tipo de juego, una descripción de las características y la cantidad de participantes.
+Cada colonia atiende a un conjunto de clientes, algunos de ellos asisten a más de una
+colonia. Nos interesa el número de cliente que lo identifica, nombre, C.I., teléfono y edad. Los
+clientes realizan diversas actividades, interesando la antigüedad con que las realizan. En el
+caso de los deportes, interesan también las fechas en las que el cliente participó en
+competencias. Los clientes sólo realizan actividades de las disponibles en su colonia.
+Se pide:
+Modelo Entidad Relación completo. Todos los atributos deberán aparecer en el diagrama
+Todas las relaciones deberán tener indicada su cardinalidad y deberá señalarse si la
+participación de las entidades es parcial o total. Deberán subrayarse los atributos
+eterminantes.Se deben formular las restricciones no estructurales. 
+
+Solución imagen 9
+
